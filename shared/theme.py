@@ -192,6 +192,11 @@ div.stButton > button:hover, div.stDownloadButton > button:hover {{ border-color
 button[kind="primary"], [data-testid="stBaseButton-primary"] {{ background:var(--text) !important; border-color:var(--text) !important; color:{p['bg']} !important; font-weight:700 !important; }}
 button[kind="primary"] p, [data-testid="stBaseButton-primary"] p {{ color:{p['bg']} !important; }}
 button[kind="primary"]:hover, [data-testid="stBaseButton-primary"]:hover {{ background:#fff !important; }}
+/* "Confirm changes" (a form's primary button): the theme's near-white primary colour left Streamlit's default white text on a near-white button, so the label vanished.
+   Give it its own clear green action look with dark text; "Discard edits" stays the quiet secondary button next to it. */
+button[kind="primaryFormSubmit"], [data-testid="stBaseButton-primaryFormSubmit"] {{ background:var(--good) !important; border:1px solid var(--good) !important; color:{p['bg']} !important; font-weight:700 !important; }}
+button[kind="primaryFormSubmit"] p, [data-testid="stBaseButton-primaryFormSubmit"] p {{ color:{p['bg']} !important; }}
+button[kind="primaryFormSubmit"]:hover, [data-testid="stBaseButton-primaryFormSubmit"]:hover {{ background:#7AD8A6 !important; border-color:#7AD8A6 !important; }}
 [data-testid="stTabs"] [data-baseweb="tab-list"] {{ gap:.2rem; border-bottom:1px solid var(--line); }}
 [data-testid="stTabs"] [data-baseweb="tab"] {{ font-size:.97rem; font-weight:500; color:var(--muted); padding:.5rem .95rem; background:transparent; }}
 [data-testid="stTabs"] [aria-selected="true"] {{ color:var(--text); }}
